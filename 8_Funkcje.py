@@ -68,4 +68,21 @@ print(f"Po wywołaniu fukcji show1: {miasto}")
 
 
 
+def show2(city):
+    print(f"Przed modyfikacją: {city}")
+    city[0] = "Berlin"
+    city[1] = "Londyn"
+    print(f"Po modyfikacji: {city}")
+    print(f"ID Po modyfikacji: {id(city)}")
+
+
+miasto1 = {0:"Gniezno", 1:"Poznań"}
+
+print(f"Przed wywołaniem fukcji show1: {miasto1}")
+print(f"ID obietku miasto: {id(miasto1)}")
+show1(dict(miasto1))
+print(f"Po wywołaniu fukcji show1: {miasto1}")
+
+
+
 
