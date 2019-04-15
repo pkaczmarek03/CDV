@@ -27,14 +27,41 @@ def plnToEuro(value):
 pln = input()
 euro = plnToEuro(float(pln))
 
-##print(f"Ilosc: {pln}PLN = {euro}Euro")
+print(f"Ilosc: {pln}PLN = {euro}Euro")
 
+
+#Zmienna Globalna#
+
+kursUSD = 3.7899
+print(f"ID USD: {id(kursUSD)}")
+
+def plnToUSD(value):
+    ##kursUSD = 3.7899
+    iloscUSD = value / kursUSD
+    iloscUSD = "{0:.4f}".format(iloscUSD)
+    ##print(f"Ilosc USD: {iloscUSD}")
+    return iloscUSD
+
+print(f"Kurs USD: {kursUSD}")
+pln = input()
+usd = plnToUSD(float(pln))
+print(f"Ilosc: {pln}PLN = {usd}USD")
     
     
+zmiennaGlobalna = 10
+print(f"\n Wartosc zmiennaGlobalna: {zmiennaGlobalna}")
+print(f"ID zmiennaGlobalna: {id(zmiennaGlobalna)}")
+      
+def spr():
+      global zmiannaGlobalna
+      zmiennaGlobalna = 20
+      print(f"\n Wartosc zmiennaGlobalna: {zmiennaGlobalna}")
+      print(f"\n ID zmiennaGlobalna: {id(zmiennaGlobalna)"})
     
-    
-    
-    
+spr()
+            
+print(f"\n Wartosc zmiennaGlobalna po wywolaniu fukncji: {zmiennaGlobalna}")
+print(f"\n ID zmiennaGlobalna po wywolaniu funkcji: {id(zmiennaGlobalna)}")
     
     
     
